@@ -38,8 +38,6 @@ export default class Combustivel extends React.Component<Props>{
             </Grid.Column>
           </Grid.Row>
         </Grid>
-        <pre>{gasolina}</pre>
-        <pre>{etanol}</pre>
         <Form onSubmit={submitForm}>
           <Form.Group widths='equal'>
             <Form.Field>
