@@ -1,11 +1,9 @@
-import { action, makeAutoObservable, observable } from 'mobx';
+import { action, observable } from 'mobx';
 
 import swal from 'sweetalert2';
 
 export default class CombustivelStore {
-  constructor() {
-    makeAutoObservable(this)
-  }
+
   @observable etanol = 0;
   @observable gasolina = 0;
 
