@@ -1,12 +1,15 @@
-import { action, observable } from 'mobx';
+import { action, makeAutoObservable, observable } from 'mobx';
 
 import { getPrice } from './../../apis/economy.api';
 
 export default class HomeStore {
+  constructor() {
+    makeAutoObservable(this)
+  }
   @observable records: any[] = [];
 
   @action buildRecords = async () => {
-   try {
+    try {
       const { data } = await getPrice();
       this.records = Object.values(data);
     } catch (error) {

@@ -38,5 +38,5 @@
   },
   "include": [
     "src"
-, "src/routes/endpoints.ts"  ]
+  ]
 }
