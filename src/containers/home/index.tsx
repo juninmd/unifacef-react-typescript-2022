@@ -4,12 +4,14 @@ import { Card, Container, Grid, Header, Icon } from 'semantic-ui-react';
 import { inject, observer } from 'mobx-react';
 
 import HomeStore from './store';
+import NewRouterStore from '../../mobx/router.store';
 
 interface Props {
+  router: NewRouterStore;
   home: HomeStore;
 }
 
-@inject('home')
+@inject('router', 'home')
 @observer
 export default class Home extends React.Component<Props> {
 
@@ -30,7 +32,7 @@ export default class Home extends React.Component<Props> {
               <Header color='blue' as='h2'>
                 <Header.Content>
                   Home
-                  <Header.Subheader>Moedas agora</Header.Subheader>
+                 <Header.Subheader>Moedas agora</Header.Subheader>
                 </Header.Content>
               </Header>
             </Grid.Column>

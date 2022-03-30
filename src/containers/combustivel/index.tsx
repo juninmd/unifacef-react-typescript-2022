@@ -1,17 +1,17 @@
 import * as React from 'react';
-
-import { Button, Container, Form, Grid, Header } from 'semantic-ui-react';
+import { Container, Grid, Header, Form, Button } from 'semantic-ui-react';
 import { inject, observer } from 'mobx-react';
-
+import NewRouterStore from '../../mobx/router.store';
 import CombustivelStore from './store';
 
 interface Props {
-  combustivel: CombustivelStore
+  router: NewRouterStore;
+  combustivel: CombustivelStore;
 }
 
-@inject('combustivel')
+@inject('router', 'combustivel')
 @observer
-export default class Combustivel extends React.Component<Props>{
+export default class Combustivel extends React.Component<Props> {
 
   render() {
 
@@ -30,9 +30,7 @@ export default class Combustivel extends React.Component<Props>{
               <Header color='blue' as='h2'>
                 <Header.Content>
                   Combustível
-                  <Header.Subheader>
-                    Etanol ou Gasolina?
-                  </Header.Subheader>
+                 <Header.Subheader>Alcool ou Gasolina?</Header.Subheader>
                 </Header.Content>
               </Header>
             </Grid.Column>
@@ -42,23 +40,11 @@ export default class Combustivel extends React.Component<Props>{
           <Form.Group widths='equal'>
             <Form.Field>
               <label>Preço da Gasolina</label>
-              <input step='any'
-                max='99'
-                value={gasolina}
-                onChange={handleForm}
-                name='gasolina'
-                type='number'
-                placeholder='ex R$ 4.05' />
+              <input step="any" max="99" value={gasolina} name='gasolina' onChange={handleForm} type='number' placeholder='ex: R$ 4.05' />
             </Form.Field>
             <Form.Field>
               <label>Preço do Etanol</label>
-              <input step='any'
-                max='99'
-                value={etanol}
-                onChange={handleForm}
-                name='etanol'
-                type='number'
-                placeholder='ex R$ 2.00' />
+              <input step="any" max="99" value={etanol} name='etanol' onChange={handleForm} type='number' placeholder='ex: R$ 2.00' />
             </Form.Field>
           </Form.Group>
           <Button type='submit'>Consultar</Button>
