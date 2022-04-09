@@ -34,14 +34,13 @@ export default class StarWars extends React.Component<Props> {
               <Header color='blue' as='h2'>
                 <Header.Content>
                   Star Wars
-                 <Header.Subheader>Lista de filmes</Header.Subheader>
+                  <Header.Subheader>Lista de filmes</Header.Subheader>
                 </Header.Content>
               </Header>
             </Grid.Column>
           </Grid.Row>
         </Grid>
         <Card.Group itemsPerRow={2}>
-
           {films.map((film, index) => {
             return (
               <Card key={index} onClick={() => openDetails(film.id)}>
@@ -52,7 +51,6 @@ export default class StarWars extends React.Component<Props> {
                 </Card.Content>
               </Card>)
           })}
-
         </Card.Group>
       </Container>
     );
