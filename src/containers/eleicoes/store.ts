@@ -10,31 +10,31 @@ export default class EleicoesStore {
   @observable candidateNumber = '';
 
   @observable candidates = {
-    ['1']: {
+    '1': {
       name: 'Naruto',
       party: 'Konoha',
       image: 'https://cm-santiago-do-cacem.pt/img/fantasy/83/how-watch-naruto-order.jpg',
       votes: 0
     },
-    ['2']: {
+    '2': {
       name: 'Goku',
       party: 'Capsule Corp',
       image: 'https://tm.ibxk.com.br/2020/12/16/16032833123011.jpg',
       votes: 0
     },
-    ['3']: {
+    '3': {
       name: 'Batman',
       party: 'Wayne Corp',
       image: 'https://veja.abril.com.br/wp-content/uploads/2022/03/batman-oscar.jpg?quality=70&strip=info&w=680&h=453&crop=1',
       votes: 0
     },
-    ['branco']: {
+    'branco': {
       name: 'Branco',
       party: 'Nenhum',
       image: 'https://cdn.mos.cms.futurecdn.net/uRfKogf9KpxZDLUJR4EnjK.jpeg',
       votes: 0
     },
-    ['00000']: {
+    '00000': {
       name: 'Nulo',
       party: 'Nenhum',
       image: 'https://www.teclasap.com.br/wp-content/uploads/2014/03/voto-nulo.png',
